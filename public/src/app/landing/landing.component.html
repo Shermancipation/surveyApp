@@ -1,0 +1,17 @@
+<h2>Welcome to the survey app!</h2>
+
+<form (submit)="onSubmit()" #loginForm="ngForm">
+  Your Name: <input 
+                type="text"
+                name="username"
+                [(ngModel)]="user.username"
+                #username = "ngModel"
+                required
+             >
+             <input 
+                type="submit"
+                value="Login"
+             >
+</form>
+
+

@@ -1,0 +1,48 @@
+<a [routerLink]="['/dashboard']">Cancel</a>
+<h2>Put the questions and options here:</h2>
+<form (submit)="newPoll()" #createPoll="ngForm">
+  Question:<input
+              type= "text"
+              name= "question"
+              [(ngModel)]= "poll.question"
+              #question = "ngModel"
+              required
+              minlength = "8"
+              ><br>
+  Option 1:<input 
+              type = "text"
+              name = "option1"
+              [(ngModel)] = "poll.option1"
+              #option1 = "ngModel"
+              required
+              minlength = "3"
+              ><br>
+  Option 2:<input 
+              type = "text"
+              name = "option2"
+              [(ngModel)] = "poll.option2"
+              #option2 = "ngModel"
+              required
+              minlength = "3"
+              ><br> 
+  Option 3:<input 
+              type = "text"
+              name = "option3"
+              [(ngModel)] = "poll.option3"
+              #option3 = "ngModel"
+              required
+              minlength = "3"
+              ><br>  
+  Option 4:<input 
+              type = "text"
+              name = "option4"
+              [(ngModel)] = "poll.option4"
+              #option4 = "ngModel"
+              required
+              minlength = "3"
+              ><br>  
+            <input
+              type = "submit"
+              value = "Create Poll"
+              >
+</form>
